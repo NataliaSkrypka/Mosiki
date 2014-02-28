@@ -18,6 +18,7 @@ public class HomePage extends PageObject{
 	private static final String SEARCH_BUTTON = "#searchbox_btn";
 	private static final String ERROR_ON_DATES = "//p[contains(@class,'dateerros')]";
 	private static final String SEARCH_HEADER = "#destinationSearch h3";
+	private static final String GUESTS_DROPDOWN = ".sb_predefined_group_options>select";
 
 	public HomePage(WebDriver driver) {
 		super(driver);
@@ -35,6 +36,7 @@ public class HomePage extends PageObject{
 
 	public void clickOnNoSpecificDatesCheckBox() {
 		findBy(CHECKBOX_NO_SPECIFIC_DATES).then().click();
+		findBy(GUESTS_DROPDOWN).selectByVisibleText("1 Adult");
 	}
 
 	public void clickOnSearchButton() {
