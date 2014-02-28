@@ -1,0 +1,4 @@
+Search cities on booking.com
+In order to go for vacation
+As a traveller
+I want to be able to search for cities and hotels
