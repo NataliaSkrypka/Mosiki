@@ -1,13 +1,11 @@
-package net.thucydides.showcase.jbehave;
-
+/*package net.thucydides.showcase.jbehave;
+import org.jbehave.core.annotations.Named;
+import org.jbehave.core.annotations.When;
+import org.jbehave.core.annotations.Given;
+import org.jbehave.core.annotations.Then;
+import net.thucydides.jbehave.ThucydidesJUnitStories;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.showcase.steps.SearchOnBookingSteps;
-
-import org.jbehave.core.annotations.Given;
-import org.jbehave.core.annotations.Named;
-import org.jbehave.core.annotations.Then;
-import org.jbehave.core.annotations.When;
-
 public class SearchOnBooking {
 
 	@Steps
@@ -17,13 +15,14 @@ public class SearchOnBooking {
 	public void userOpensMainPage() {
 		searchSteps.userOpenBookingComMainPage();
 	}
+	
 
 	@When("user performs search for <fullText> on main page")
 	public void searchTextOnBookingCom(
 			@Named("fullText") final String searchString) {
 		searchSteps.searchTextOnBookingCom(searchString);
 	}
-
+	
 	@When("user leave search fields empty")
 	public void leaveSearchFieldsEmpty() {
 		searchSteps.searchTextOnBookingCom("");
@@ -51,5 +50,5 @@ public class SearchOnBooking {
 			@Named("message") final String messageOnDates) {
 		searchSteps.checkMessageOnDates(messageOnDates);
 	}
-
-}
+	
+}*/

@@ -5,17 +5,18 @@ import java.io.File;
 import org.jbehave.core.annotations.AfterStories;
 import org.jbehave.core.annotations.BeforeStories;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import net.thucydides.jbehave.ThucydidesJUnitStories;
 
 public class AcceptanceTestSuite extends ThucydidesJUnitStories {
 	
 	WebDriver driver;
-	
 	@BeforeStories
 	public void start(){
-		File file = new File("lib\\IEDriverServer.exe");
-		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+		File file = new File("lib\\FirefoxDriverServer.exe");
+		//System.setProperty("webdriver.ie.driver", file.getAbsolutePath());  
+		System.setProperty("webdriver.Firefox.driver", file.getAbsolutePath());  
 	}
 	
 	@AfterStories

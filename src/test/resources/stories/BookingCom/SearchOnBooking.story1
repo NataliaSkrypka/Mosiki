@@ -5,7 +5,7 @@ Changelog
 |Feb, 19th 2014 |Natalia Skrypka  |story file created                  |
 
 Scenario: 1 Full text search with valid parameters
-Given user open main page
+Given user opens main page
 When user performs search for <fullText> on main page
 Then mentioned entity is shown in the result
 
@@ -15,7 +15,7 @@ Examples:
 |Ellington           |
 
 Scenario: 2 Full text search with invalid parameters
-Given user open main page
+Given user opens main page
 When user performs search for <fullText> on main page
 Then message <message> is shown on search result
 
@@ -29,14 +29,25 @@ When user leave search fields empty
 Then message <message> is shown on search result
 
 Examples:
-|message                                                     |
+|message                                                    |
 |Oops! We need at least part of the name to start searching.|
 
 Scenario: 4 Full text search with not specified dates
-Given user open main page
+Given user opens main page
 When user performs search for <fullText> on main page and leave dates not specified
 Then error message <message> about invalid dates is shown on search result
 
 Examples:
 |fullText |message                                  |
 |New York |Please enter dates to check availability.|
+
+
+
+
+
+Scenario: 1 User signs into account
+Given user opens main page
+When user inputs anya_test@yahoo.com and hannah_evergreen1 on main page
+Then displayed name is anya_test@yahoo.com
+When user clicks log out
+

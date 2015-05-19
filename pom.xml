@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<thucydides.version>0.9.229</thucydides.version>
 		<thucydides.jbehave.version>0.9.229</thucydides.jbehave.version>
-		<webdriver.driver>iexplorer</webdriver.driver>
+		<webdriver.driver>firefox</webdriver.driver>
 	</properties>
 
 	<dependencies>
@@ -22,6 +22,7 @@
 			<artifactId>thucydides-core</artifactId>
 			<version>${thucydides.version}</version>
 		</dependency>
+	
 		<dependency>
 			<groupId>net.thucydides</groupId>
 			<artifactId>thucydides-jbehave-plugin</artifactId>

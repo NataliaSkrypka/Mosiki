@@ -1,4 +1,4 @@
-package net.thucydides.showcase.steps;
+/*package net.thucydides.showcase.steps;
 
 import java.util.List;
 
@@ -36,6 +36,7 @@ public class SearchOnBookingSteps extends ScenarioSteps {
 	public void searchTextOnBookingCom(String searchString) {
 		homePage.inputTextInSearchField(searchString);
 		homePage.clickOnNoSpecificDatesCheckBox();
+		homePage.selectRadioButton ();
 		homePage.clickOnSearchButton();
 	}
 
@@ -70,4 +71,6 @@ public class SearchOnBookingSteps extends ScenarioSteps {
 				homePage.getErrorOnDates());
 	}
 
-}
+
+
+}*/
