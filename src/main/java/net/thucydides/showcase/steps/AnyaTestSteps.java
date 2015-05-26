@@ -34,28 +34,32 @@ public class AnyaTestSteps extends ScenarioSteps {
 	}
 	
 	@Step
-	public void SigningIn() throws Throwable {
+	public void signIn() throws Throwable {
 		homePage.selectSignIn ();
 		homePage.clickSignInButton();
     }
 	
 	@Step
-	 public void enteringMail(String searchMail) {
+	 public void enterMail(String searchMail) {
 		homePage.enterMail (searchMail);
 	}
 	@Step
-	public void enteringPassword(String searchPass) {
+	public void enterPassword(String searchPass) {
 		homePage.enterPass (searchPass);	
 	}
 		
     @Step 
     public void submitForm() {
-    	homePage.Click_sign_in();
+    	homePage.clickSignIn();
     }
     @Step
-    public void userSigned(String userName) {
+   /* public void userSigned(String userName) {
     	assertEquals("As expected", userName, homePage.getSignedUpassert());
     	
+    }*/
+    public String getEmaiOfSignedUser() {  	
+    	return homePage.getEmailOfUserSigned();
+    
     }
    @Step 
    public void userLoggingOut (){

@@ -147,12 +147,12 @@ public class HomePage extends PageObject {
 	}
 
 //clicking final [sign in] to submit form completed
-	public void Click_sign_in() {
+	public void clickSignIn() {
 	submitForm.click();
 		}
 	
 //getting signed user name
-	public String getSignedUpassert() {
+	public String getEmailOfUserSigned() {
 	//	waitForTextToDisappear("It's fast, free and secure!");
 		userValidation.click();
 		return findBy(SIGNED_USER).getText();
@@ -172,5 +172,7 @@ public class HomePage extends PageObject {
 //		Alert alert = getDriver().switchTo().alert();
 		return findBy(ERROR_ON_MAIL_CREDS).getText();	
 	}
+
+	
 	
 }
