@@ -19,13 +19,14 @@ public class Anya {
 	AnyaTestSteps searchSteps;
 
 	@Given("user opens main page")
-	@Aliases(values = { "user logs in with anya_test@yahoo.com and hannah_evergreen1 on main page" })
+	@Aliases(values = { "user logs in with anya_test@yahoo.com and hannah_evergreen1 on main page",
+			             "user logs in with invalid creds on main page"})
 	public void userOpensMainPage() {
 		searchSteps.userOpenBookingComMainPage();
 	}
 
 	@When("user inputs $mail and $password on main page")
-	public void signingInCheckup(@Named("mail") String searchMail,
+	public void checkSignedUser(@Named("mail") String searchMail,
 			@Named("password") String searchPassword) throws Throwable {
 		searchSteps.signIn();
 		searchSteps.enterMail(searchMail);
@@ -35,24 +36,27 @@ public class Anya {
 
 	@When("user clicks log out")
 	public void logOut() {
-		searchSteps.userLoggingOut();
+		searchSteps.userLogsOut();
 	}
 
 	@Then("displayed name is $user_id")
 	public void signedUser(@Named("user_id") String userName) {
 		String EMAIL=searchSteps.getEmaiOfSignedUser();
 		assertEquals("As expected",userName,  EMAIL);
-		assertThat( EMAIL, equals(userName));
+		//assertThat( EMAIL, equals(userName));
 	}
 
 	@Then("<Sign In> displayed")
-	public void userLoggedOut(@Named("Sign in") final String SignIn) {
-		searchSteps.loggingOutValidation(SignIn);
+	public void userLoggedOut(@Named("Sign in") String SignIn) {
+	//	searchSteps.loggingOutValidation(SignIn);
+		String SIGNIN= searchSteps.loggingOutValidation();
+		assertEquals("As expected", SignIn, SIGNIN);
 	}
-
+	
 	@Then("<error message> displayed")
 	public void userGettingErrorMessage(
 			@Named("error message") final String ErrMssge) {
-		searchSteps.checkMssge(ErrMssge);
+		String ERROR_MSSGE=searchSteps.checkMssge();
+		assertEquals("As expected", ErrMssge,ERROR_MSSGE);
 	}
 }

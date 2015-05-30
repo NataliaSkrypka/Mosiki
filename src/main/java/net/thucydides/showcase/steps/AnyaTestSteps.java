@@ -28,7 +28,9 @@ public class AnyaTestSteps extends ScenarioSteps {
 
 	@Step
 	public void userOpenBookingComMainPage() {
+		getDriver().manage().deleteAllCookies();
 		homePage.open();
+		
 		waitABit(200);
 		LOG.info("Property testing " + System.getProperty("thucydides.capability.types"));
 	}
@@ -53,26 +55,22 @@ public class AnyaTestSteps extends ScenarioSteps {
     	homePage.clickSignIn();
     }
     @Step
-   /* public void userSigned(String userName) {
-    	assertEquals("As expected", userName, homePage.getSignedUpassert());
-    	
-    }*/
     public String getEmaiOfSignedUser() {  	
     	return homePage.getEmailOfUserSigned();
     
     }
    @Step 
-   public void userLoggingOut (){
+   public void userLogsOut (){
 		homePage.logOut();	
-		waitABit(10000);
+		waitABit(200);
    }
     @Step
-   public void loggingOutValidation (String SignIn){
-       assertEquals("As expected", SignIn, homePage.getSignedOutMessage());
+   public String loggingOutValidation (){
+       return homePage.getSignedOutMessage();
    }
     @Step
-    public void checkMssge(String ErrMssge){
-    	assertEquals ("As expected", ErrMssge, homePage.getErrorOnInvalidCreds());
+    public String checkMssge(){
+    	return homePage.getErrorOnInvalidCreds();
     }
 }
 

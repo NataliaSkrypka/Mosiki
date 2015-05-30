@@ -40,8 +40,8 @@ public class HomePage extends PageObject {
 	private static final String SIGN_IN_1 = "//div[@class='user_access_signin_menu form-section form-shown-section']//form[contains(@class, 'signin')]//input[@type='submit']";
 	private static final String SIGNED_USER = "//ul[@class='up_menu_row_top']//span[@class='header_name user_firstname']";
 	private static final String ERROR_ON_MAIL_CREDS = "//li[@id='current_account']//div[contains(@class,'alert')]";
-
 	private static final String SIGN_OUT_BUTTON = "//div[@class='new_menu_size popover_content']//ul[4]/li";
+	
 	@FindBy(xpath = "//li[@id='current_account']/a")
 	private WebElementFacade signInLink;
 	@FindBy(xpath = "//li[@id='current_account']//div[@data-target='user_access_signin_menu']")
@@ -110,7 +110,6 @@ public class HomePage extends PageObject {
 		 */
 		//getDriver().manage().deleteAllCookies();
 		String userIsLogged = signInLink.getText().trim();
-		System.out.println("+++++++++++"+userIsLogged);
 		if (userIsLogged.equalsIgnoreCase("sign in")) {
 			signInLink.click();
 			// waitABit(200);
@@ -160,7 +159,7 @@ public class HomePage extends PageObject {
 
 // signing out from account
 	public void logOut() {
-		signOutButton.click();
+		signOutButton.click();	
 	}
 
 	public String getSignedOutMessage() {

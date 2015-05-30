@@ -12,14 +12,14 @@ When user clicks log out
 
 
 Scenario: 2 User tries to sign in with invalid credentials
-Given user logs in with anya_test@yahoo.com and hannah_evergreen1 on main page
+Given user logs in with invalid creds on main page
 When user inputs <mail> and <password> on main page
 Then <error message> displayed
 
 Examples:
-|mail                      |password          |error message                                                             |
-|""abc##                   |hannah_evergreen1 | Please enter a valid email address.                                      |
-|                          |                  | You entered an email address/password combination that doesn't match     |
+|mail                      |password          |error message                                                                   |
+|""abc##                   |hannah_evergreen1 | You entered an email address/password combination that doesn't match. I forgot |
+|                          |                  | Please enter a valid email address.                                            |
 
 
 
