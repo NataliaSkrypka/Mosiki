@@ -112,7 +112,7 @@ public class HomePage extends PageObject {
 		String userIsLogged = signInLink.getText().trim();
 		if (userIsLogged.equalsIgnoreCase("sign in")) {
 			signInLink.click();
-			// waitABit(200);
+			
 		} else {
 			waitForTextToAppear("Sign In");
 		}

@@ -30,8 +30,8 @@ public class AnyaTestSteps extends ScenarioSteps {
 	public void userOpenBookingComMainPage() {
 		getDriver().manage().deleteAllCookies();
 		homePage.open();
-		
-		waitABit(200);
+		//waitABit(200);
+		homePage.waitForTextToAppear ("Find the Best Deals");
 		LOG.info("Property testing " + System.getProperty("thucydides.capability.types"));
 	}
 	

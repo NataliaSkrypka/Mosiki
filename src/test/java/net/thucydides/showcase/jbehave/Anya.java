@@ -43,7 +43,7 @@ public class Anya {
 	public void signedUser(@Named("user_id") String userName) {
 		String EMAIL=searchSteps.getEmaiOfSignedUser();
 		assertEquals("As expected",userName,  EMAIL);
-		//assertThat( EMAIL, equals(userName));
+		//assertThat("User invalid",EMAIL,equals(userName)); //the first message is the one you get in case assert encounters invalid parameter
 	}
 
 	@Then("<Sign In> displayed")
