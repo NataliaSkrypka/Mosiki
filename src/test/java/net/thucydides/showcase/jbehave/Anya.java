@@ -19,8 +19,7 @@ public class Anya {
 	AnyaTestSteps searchSteps;
 
 	@Given("user opens main page")
-	@Aliases(values = { "user logs in with anya_test@yahoo.com and hannah_evergreen1 on main page",
-			             "user logs in with invalid creds on main page"})
+	@Aliases(values = {"user logs in with invalid creds on main page"})
 	public void userOpensMainPage() {
 		searchSteps.userOpenBookingComMainPage();
 	}
@@ -34,10 +33,10 @@ public class Anya {
 		searchSteps.submitForm();
 	}
 
-	@When("user clicks log out")
-	public void logOut() {
-		searchSteps.userLogsOut();
-	}
+//	@When("user clicks log out")
+//	public void logOut() {
+//		searchSteps.userLogsOut();
+//	}
 
 	@Then("displayed name is $user_id")
 	public void signedUser(@Named("user_id") String userName) {

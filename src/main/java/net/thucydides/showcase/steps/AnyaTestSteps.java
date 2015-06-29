@@ -53,9 +53,11 @@ public class AnyaTestSteps extends ScenarioSteps {
     @Step 
     public void submitForm() {
     	homePage.clickSignIn();
+    	homePage.waitFor("//li[@id='current_account']/a/span[2]");
     }
     @Step
-    public String getEmaiOfSignedUser() {  	
+    public String getEmaiOfSignedUser() { 
+    	
     	return homePage.getEmailOfUserSigned();
     
     }
