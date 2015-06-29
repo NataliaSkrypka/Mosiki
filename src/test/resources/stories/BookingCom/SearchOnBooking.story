@@ -21,7 +21,7 @@ Then message <message> is shown on search result
 
 Examples:
 |fullText         |message                              |
-|@#$ %^&          |Sorry, we don't recognise that name. |
+|@#$ %^&          |Sorry, we don't recognize that name. |
 
 Scenario: 3 Full text search with empty parameters
 Given user open main page
@@ -40,10 +40,6 @@ Then error message <message> about invalid dates is shown on search result
 Examples:
 |fullText |message                                  |
 |New York |Please enter dates to check availability.|
-
-
-
-
 
 Scenario: 1 User signs into account
 Given user opens main page

@@ -1,4 +1,4 @@
-/*package net.thucydides.showcase.jbehave;
+package net.thucydides.showcase.jbehave;
 import org.jbehave.core.annotations.Named;
 import org.jbehave.core.annotations.When;
 import org.jbehave.core.annotations.Given;
@@ -51,4 +51,4 @@ public class SearchOnBooking {
 		searchSteps.checkMessageOnDates(messageOnDates);
 	}
 	
-}*/
+}

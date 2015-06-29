@@ -2,7 +2,7 @@ Signing Up on booking.com
 
 Changelog
 |Date           |Author            |Change                             |
-|May, 5th 2015  |Ganna Barsuk      |story file created                |
+|May, 5th 2015  |Ganna Barsuk      |story file created                 |
 
 Scenario: 1 User signs into account
 Given user opens main page
