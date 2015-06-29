@@ -38,8 +38,7 @@ public class HomePage extends PageObject {
 	private static final String EMAIL = "//div[@class='user_access_signin_menu form-section form-shown-section']//form[contains(@class, 'signin')]//input[@name='username']";
 	private static final String PASS = "//div[@class='user_access_signin_menu form-section form-shown-section']//form[contains(@class, 'signin')]//input[@name='password']";
 	private static final String SIGN_IN_1 = "//div[@class='user_access_signin_menu form-section form-shown-section']//form[contains(@class, 'signin')]//input[@type='submit']";
-	private static final String SIGNED_USER = "//li[@id='current_account']/a/span[2]";
-	//private static final String SIGNED_USER ="li[@id='current_account']//span[@class='header_name user_firstname']";
+	private static final String SIGNED_USER = "//ul[@class='up_menu_row_top']//span[@class='header_name user_firstname']";
 	private static final String ERROR_ON_MAIL_CREDS = "//li[@id='current_account']//div[contains(@class,'alert')]";
 	private static final String SIGN_OUT_BUTTON = "//div[@class='new_menu_size popover_content']//ul[4]/li";
 	
@@ -154,8 +153,7 @@ public class HomePage extends PageObject {
 //getting signed user name
 	public String getEmailOfUserSigned() {
 	//	waitForTextToDisappear("It's fast, free and secure!");
-	//userValidation.click();
-		waitABit(300);
+		userValidation.click();
 		return findBy(SIGNED_USER).getText();
 	}
 

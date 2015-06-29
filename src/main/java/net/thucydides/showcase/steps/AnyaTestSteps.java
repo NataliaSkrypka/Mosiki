@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.pages.PageObject;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
 import net.thucydides.showcase.pages.HomePage;
@@ -31,8 +30,8 @@ public class AnyaTestSteps extends ScenarioSteps {
 	public void userOpenBookingComMainPage() {
 		getDriver().manage().deleteAllCookies();
 		homePage.open();
-		//waitABit(200);
-		homePage.waitForTextToAppear ("Find the Best Deals");
+		
+		waitABit(200);
 		LOG.info("Property testing " + System.getProperty("thucydides.capability.types"));
 	}
 	
@@ -56,8 +55,7 @@ public class AnyaTestSteps extends ScenarioSteps {
     	homePage.clickSignIn();
     }
     @Step
-    public String getEmaiOfSignedUser() {
-    	
+    public String getEmaiOfSignedUser() {  	
     	return homePage.getEmailOfUserSigned();
     
     }
@@ -66,7 +64,7 @@ public class AnyaTestSteps extends ScenarioSteps {
 		homePage.logOut();	
 		waitABit(200);
    }
-   @Step
+    @Step
    public String loggingOutValidation (){
        return homePage.getSignedOutMessage();
    }
