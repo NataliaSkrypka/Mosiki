@@ -10,7 +10,6 @@ When user inputs anya_test@yahoo.com and hannah_evergreen1 on main page
 Then displayed name is anya_test@yahoo.com
 When user clicks log out
 
-
 Scenario: 2 User tries to sign in with invalid credentials
 Given user logs in with invalid creds on main page
 When user inputs <mail> and <password> on main page

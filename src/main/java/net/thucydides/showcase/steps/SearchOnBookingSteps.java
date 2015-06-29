@@ -1,4 +1,4 @@
-/*package net.thucydides.showcase.steps;
+package net.thucydides.showcase.steps;
 
 import java.util.List;
 
@@ -73,4 +73,4 @@ public class SearchOnBookingSteps extends ScenarioSteps {
 
 
 
-}*/
+}
